@@ -10,6 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -62,5 +63,13 @@ public class BookAdapter extends BaseAdapter {
 
 
         return view;
+    }
+
+    //filter based on keywords
+    //pass filtered array
+    public  void filterList(List<Book> filteredList){
+
+        bookList=filteredList;
+        notifyDataSetChanged();
     }
 }
